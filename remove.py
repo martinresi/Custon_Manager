@@ -13,7 +13,6 @@ class remove ():
             DNII=str(input("ingre el DNI de la persona a eliminar:"))
 
             nombreee = len(gim.list_clients.remove(gim.list_clients[nombree]))
-            apellidoo = ''
             DNII= len(gim.list_clients.pop(DNII))
 
 
