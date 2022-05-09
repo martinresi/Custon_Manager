@@ -7,6 +7,7 @@ from remove import *
 
 
 def loop():
+    remove_module = remove()
     gimclass = ''
     exitclass = ''
 
@@ -44,13 +45,14 @@ def loop():
 
         if option == "4":
             print("Modificar Clientes... \n ")
+            remove_module.delete()
 
         if option == "5":
             print("Borrar Clientes... \n ")
             if exitclass!= '':
                 exitclass=remove()
             else:
-                exitclass.exit()
+                exitclass.delete()
 
 
         if option == "6":

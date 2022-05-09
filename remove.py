@@ -2,25 +2,26 @@ from function import *
 
 
 class remove ():
-    def exit(self):
+    def buscar_por_nombre(self, nombre):
+        for indice, cliente in enumerate(gim.list_clients):
+            if cliente['nombre'] == nombre:
+                return indice
+
+        return None
 
 
-        while True:
-            print("ingre nombre, apellido, DNI, de la persona a eliminar:")
+    def delete(self):
 
-            nombree=str(input("ingre el nombre de la persona a eliminar:"))
-            apellidoo=str(input("ingre el apellido de la persona a eliminar:"))
-            DNII=str(input("ingre el DNI de la persona a eliminar:"))
+        print("ingre nombre, apellido, DNI, de la persona a eliminar:")
 
-            nombreee = len(gim.list_clients.remove(gim.list_clients[nombree]))
-            DNII= len(gim.list_clients.pop(DNII))
+        nombree=str(input("ingre el nombre de la persona a eliminar:"))
+        apellidoo=str(input("ingre el apellido de la persona a eliminar:"))
+        DNII=str(input("ingre el DNI de la persona a eliminar:"))
 
-
-
-            if True != True:
-                break
-
-
-
-
+        indice_de_lista = self.buscar_por_nombre(nombree)
+        if indice_de_lista != None:
+            cliente = gim.list_clients.pop(indice_de_lista)
+            print(f"Se ha eliminado el siguiente cliente {str(cliente)}")
+        else:
+            print("No se encontro el cliente a eliminar")
 
