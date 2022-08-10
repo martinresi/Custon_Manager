@@ -1,66 +1,66 @@
 from function import *
 from remove import *
 
-# importamos estas funciones las cuales nos ayudan a manipular los datos
+# import these functions
 
-"""funcion principal"""
+"""principal function"""
 
 
 def loop():
-    remove_module = remove()
+    remove_module = Remove()
     gimclass = ''
     exitclass = ''
 
     while True:
 
         print("================================")
-        print("###### Gestor de Clientes ######")
+        print("###### customer manager ######")
         print("================================")
-        print("[1] Listar Clientes")
-        print("[2] Buscar Clientes")
-        print("[3] Añadir Clientes")
-        print("[4] Modificar Clientes")
-        print("[5] Borrar Clientes")
-        print("[6] Salir")
+        print("[1] List clients")
+        #print("[2] Look for clients")
+        print("[2] Add clients")
+        #print("[3] Modify clients")
+        print("[3] Delate clients")
+        print("[4] Exit")
         print("================================")
 
         # ingresamos la opcion
         option = input("")
 
-        if option == "1":
-            print("Listando los clientes...\n")
+        #if option == "1":
+            #print("List clients...\n")
 
-        if option == "2":
-            print("Buscar Clientes... \n ")
+        if option == "1":
+            print("List clients... \n ")
             if gimclass != '':
                 gimclass.show_all()
 
 
-        if option == "3":
-            print("Añadir Clientes... \n ")
+        if option == "2":
+            print("Add clients... \n ")
             if gimclass == '':
                 gimclass=gim()
             else:
                 gimclass.__init__()
 
-        if option == "4":
-            print("Modificar Clientes... \n ")
+        if option == "3":
+            print("Delate clients... \n ")
             remove_module.delete()
 
-        if option == "5":
-            print("Borrar Clientes... \n ")
-            if exitclass!= '':
-                exitclass=remove()
-            else:
-                exitclass.delete()
+        #if option == "4":
+            #print("Delate clients... \n ")
+            #if exitclass != '':
+                #exitclass = Remove()
+            #else:
+                #exitclass.delete()
 
 
-        if option == "6":
-            print("salir... \n")
+        if option == "4":
+            print("exit... \n")
 
             break
 
-        input("\n ENTER para continuar...")
+        input("\n enter to continue...")
 
 
 loop()

@@ -3,23 +3,23 @@ class gim():
 
 
     def __init__(self):
-        pregunta = str(input("desea ingresar datos: si/no: "))
+        Question = str(input("want to enter data: yes/no: "))
 
-        while pregunta == "si":
+        while Question == "yes":
 
-            self.nombre = str(input("ingresa el nombre: "))
-            apelido = str(input("ingresa el apellido: "))
-            dni = int(input("ingresa el DNI: "))
-            pregunta = str(input("desea ingresar datos: si/no"))
+            self.name = str(input("enter name: "))
+            last_Name = str(input("enter last name: "))
+            id = int(input("enter DNI: "))
+            Question = str(input("want to enter data: yes/no: "))
 
-            list_one = {'nombre': self.nombre, 'apellido': apelido, 'dni': dni}
+            list_one = {'name': self.name, 'last_name': last_Name, 'ID': id}
             self.list_clients.append(list_one)
 
-            if pregunta == "no":
+            if Question == "no":
                 break
 
     def show(self, client):
-        print(f"{client['nombre']} - {client['apellido']} - {client['dni']}")
+        print(f"{client['name']} - {client['last_name']} - {client['ID']}")
 
     def show_all(self):
         for client in self.list_clients:
